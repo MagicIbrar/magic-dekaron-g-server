@@ -1,0 +1,14 @@
+# runtime state and secrets - never commit
+stub.sqlite*
+save.json
+panel-admin.json
+PANEL-FIRST-LOGIN.txt
+server.config
+stub.log
+stub.out
+stub.err
+# generated / local
+gamedata/
+certs/
+__pycache__/
+*.pyc

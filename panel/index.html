@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Magic Dekaron G - Server Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login" class="login">
+  <div class="card">
+    <h1>Magic Dekaron G</h1>
+    <p class="sub">Server management panel</p>
+    <input id="pw" type="password" placeholder="Admin password" autocomplete="current-password">
+    <button class="go" onclick="doLogin()">Sign in</button>
+    <div id="loginMsg" class="msg"></div>
+  </div>
+</div>
+
+<div id="app" class="app" style="display:none">
+  <nav class="side">
+    <div class="brand">Magic Dekaron G</div>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#players">Players</a>
+    <a href="#characters">Characters</a>
+    <a href="#accounts">Accounts</a>
+    <a href="#gifts">Gifts &amp; mail</a>
+    <a href="#servers">Community servers</a>
+    <a href="#logs">Logs</a>
+    <a href="#settings">Settings</a>
+    <div class="spacer"></div>
+    <a href="#" onclick="doLogout();return false" class="out">Sign out</a>
+  </nav>
+  <main id="view"></main>
+</div>
+
+<script src="app.js"></script>
+<script src="chars.js"></script>
+</body>
+</html>

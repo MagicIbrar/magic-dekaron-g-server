@@ -1,0 +1,37 @@
+# Dekaron G server configuration. Copy this file to "server.config" and edit it, then run start-server.
+# Lines are KEY=VALUE. Everything has a sensible default; you can leave most of it alone for a local test.
+
+# The address players' clients use to reach THIS server (what the server advertises).
+#  - Local test in BlueStacks:     10.0.2.2   (the emulator's name for the host PC)
+#  - A public server:              your public IP or domain, e.g. 203.0.113.10
+HOST_IP=10.0.2.2
+
+# Human name shown in the client's Region screen. Must be "Group@Server" (left of @ groups servers together).
+REGION_NAME=My Server@Home
+
+# The game's content (bundles + updates). Players download this; leave it on Thumbage's still-live CDN unless you host your own.
+STUB_CDN_ROOT=https://cdn-gb.dkmgservice.com/AndroidW_0.1.356
+
+# Game data the SERVER reads. Leave blank to use ./gamedata (built by prepare_gamedata.py). Set a path to use another folder.
+STUB_GDB=
+
+# Accounts. Guests (device login, no password) on = 1. The management panel runs on this port, bound to localhost.
+STUB_GUESTS=1
+STUB_ADMIN_PORT=8010
+
+# --- Network of servers (optional) ---------------------------------------------------------------------------------
+# A shared secret turns on cross-server accounts. Set the SAME value on every server in your network. Leave blank = this
+# server keeps its own accounts only (standalone), which is fine for a single private server.
+STUB_HUB_AUTH_SECRET=
+# Set to 1 on the ONE central hub that owns the accounts; leave 0 on community servers.
+STUB_IS_HUB=0
+# On a community server, the hub's base URL to authenticate players against (e.g. https://hub.example.com:8002).
+STUB_HUB_AUTH_URL=
+# Register this server into a hub's Region list so players see it: the hub's URL + the hub's shared register key.
+STUB_HUB_URL=
+STUB_HUB_KEY=
+
+# --- Behind NAT with no port-forwarding? Use the relay (see relay.py and HOST guide). ------------------------------
+# Leave these blank unless you run the relay. They make the server advertise the relay's game entry as its game address.
+STUB_ADVERTISE_GAME_HOST=
+STUB_ADVERTISE_GAME_PORT=
